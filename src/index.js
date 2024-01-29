@@ -8,6 +8,10 @@ const io = new Server(httpServer);
 
 app.use(express.static("public"));
 
+
+const port = process.env.PORT || 3000; // Use the PORT environment variable provided by Railway or default to 3000
+
+
 const spaceshipStates = {};
 const bullets = [];
 
@@ -136,6 +140,6 @@ function gameTick() {
 // Set game tick interval (e.g., 30 times per second)
 setInterval(gameTick, 1000 / 30);
 
-httpServer.listen(5000, () => {
-    console.log('Server is running on port 5000');
+httpServer.listen(port, '0.0.0.0', () => {
+    console.log(`Server running on port ${port}`);
 });
