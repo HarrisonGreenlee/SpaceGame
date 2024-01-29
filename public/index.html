@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Game</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('space.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            font-size: 0.7em;
+        }
+        p {
+            line-height: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Space Game</h1>
+    <canvas id="gameCanvas" width="800" height="800" style="border:1px solid #000;"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/index.js"></script>
+    </center>
+    <p>By Harrison Greenlee</p>
+    <br>
+    <br>
+    <p>Controls:</p>
+    <p>A/←, D/→: turn ship left/right</p>
+    <p>W/↑, S/↓: accelerate/decelerate</p>
+    <p>Spacebar: shoot</p>
+    <p>Reload page to respawn.</p>
+</body>
+</html>
